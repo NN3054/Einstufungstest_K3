@@ -1,3 +1,7 @@
+/**
+ * @author NN
+ */
+
 import java.util.Arrays;
 
 public class Testaufgabe {
@@ -15,7 +19,6 @@ public class Testaufgabe {
         System.out.println(Arrays.deepToString(resArr2) + "\n");
         //endregion
 
-
         //region FindMatches
         System.out.println("FindMatches output:");
         findMatches(data0, data0[1], target1);
@@ -26,8 +29,13 @@ public class Testaufgabe {
         //endregion
 
         //region InsertMiddle
-        String resString1 = insertMiddle("01234", "abc");
+        String resString1 = insertMiddle("XY", "abc");
+        String resString2 = insertMiddle("01234", "abc");
+        String resString3 = insertMiddle("01234567890123", "./-");
+
         System.out.println(resString1);
+        System.out.println(resString2);
+        System.out.println(resString3);
         //endregion
     }
 
@@ -50,9 +58,9 @@ public class Testaufgabe {
 
     public static void findMatches(int[][] data, int[] pattern, int[] target) {
 
-        int lengthInput = data.length - 1;
+        int lengthInput = data.length;
 
-        for (int i = 0; i <= lengthInput; i++) {
+        for (int i = 0; i < lengthInput; i++) {
 
             int n_fits = 0;
 
@@ -64,7 +72,7 @@ public class Testaufgabe {
 
                 boolean fits = true;
 
-                for (int k = 0; k <= pattern.length - 1; k++) {
+                for (int k = 0; k < pattern.length; k++) {
                     if (pattern[k] != data[i][j + k]) {
                         fits = false;
                         break;
@@ -85,27 +93,11 @@ public class Testaufgabe {
 
 
     public static String insertMiddle(String input, String seps) {
-
-        char middleChar = seps.charAt(0);
-
-        if (input.length() >= 3){
-            String part_1 = insertMiddle(input.substring(0, input.length() / 2), seps.substring(1));
-            String part_2 = insertMiddle(input.substring(input.length() / 2), seps.substring(1));
-            return part_1 + middleChar + part_2;
+        if (input.length() > 1 && seps.length() > 0) {
+            String firstHalf = input.substring(0, input.length() / 2);
+            String secondHalf = input.substring((int) Math.ceil(input.length() / 2));
+            input = insertMiddle(firstHalf, seps.substring(1)) + seps.charAt(0) + insertMiddle(secondHalf, seps.substring(1));
         }
-        else{
-            return input;
-        }
-
-
-        /*
-        for (int i = 0; i < input.length(); i++) {
-
-            resString += input.charAt(i);
-
-            if (i == middleIndex) {
-                resString += "a";
-            }
-        }*/
+        return input;
     }
 }
