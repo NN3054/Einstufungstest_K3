@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="68f2f454-a9bb-4ba2-a9e2-31e70e2c9746" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Einstufungstest/Testaufgabe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Einstufungstest/Testaufgabe.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Testaufgabe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Testaufgabe.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,12 +38,18 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Einstufungstest_K2" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.116027534" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Testaufgabe">
     <configuration default="true" type="Applet">
@@ -121,8 +128,16 @@
       <option name="presentableId" value="Default" />
       <updated>1508174897102</updated>
       <workItem from="1631783053151" duration="16170000" />
-      <workItem from="1631858356662" duration="1209000" />
+      <workItem from="1631858356662" duration="2254000" />
     </task>
+    <task id="LOCAL-00001" summary="complete K3 test + docs">
+      <created>1631859657157</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1631859657157</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,5 +147,7 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/../.." />
     </ignored-roots>
+    <MESSAGE value="complete K3 test + docs" />
+    <option name="LAST_COMMIT_MESSAGE" value="complete K3 test + docs" />
   </component>
 </project>

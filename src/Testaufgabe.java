@@ -15,8 +15,10 @@ public class Testaufgabe {
         System.out.println("LabelPath ouput:");
         int[][] resArr1 = labelPath(3, new int[][]{});
         int[][] resArr2 = labelPath(4, data0);
-        System.out.println(Arrays.deepToString(resArr1) + "\n");
-        System.out.println(Arrays.deepToString(resArr2) + "\n");
+        System.out.println(Arrays.deepToString(resArr1));
+        System.out.println("--------");
+        System.out.println(Arrays.deepToString(resArr2));
+        System.out.println("--------");
         //endregion
 
         //region FindMatches
@@ -26,6 +28,7 @@ public class Testaufgabe {
         findMatches(data1, data0[1], target1);
         System.out.println("--------");
         findMatches(data1, data0[2], target2);
+        System.out.println("--------");
         //endregion
 
         //region InsertMiddle
@@ -33,8 +36,11 @@ public class Testaufgabe {
         String resString2 = insertMiddle("01234", "abc");
         String resString3 = insertMiddle("01234567890123", "./-");
 
+        System.out.println("InsertMiddle output:");
         System.out.println(resString1);
+        System.out.println("--------");
         System.out.println(resString2);
+        System.out.println("--------");
         System.out.println(resString3);
         //endregion
     }
@@ -42,13 +48,13 @@ public class Testaufgabe {
     public static int[][] labelPath(int n, int[][] points) {
 
         int[][] myArr = new int[n][n];
-        int pointsArrSize = points.length - 1;
+        int pointsArrSize = points.length;
 
         for (int[] row : myArr) {
             Arrays.fill(row, n);
         }
 
-        for (int i = 0; i <= pointsArrSize; i++) {
+        for (int i = 0; i < pointsArrSize; i++) { // could also do:  for (int[] point : points)
 
             myArr[points[i][0]][points[i][1]] = -1;
         }
